@@ -8,6 +8,11 @@ public class HouseView {
     private boolean loop = true;
     private char key;
 
+    public void listHouse() {
+        System.out.println("==============房屋列表==============");
+        System.out.println("编号\t\t房主\t\t电话\t\t地址\t\t月租\t\t状态（未出租/已出租）");
+    }
+
     public void mainMenu() {
 
         do{
