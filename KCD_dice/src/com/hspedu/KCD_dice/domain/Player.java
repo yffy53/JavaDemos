@@ -5,7 +5,7 @@ public class Player {
     private String name;
     private int totalScore;//累计得分
 
-    public Player(String name, int totalScore) {
+    public Player(String name) {
         this.name = name;
         this.totalScore = 0;
     }

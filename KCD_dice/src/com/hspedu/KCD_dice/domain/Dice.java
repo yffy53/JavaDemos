@@ -6,10 +6,14 @@ import java.util.Random;
 public class Dice {
     private int faces;
 
-    Dice(int faces) {
+    public Dice(int faces) {
         this.faces = faces;
     }
-    public int roll() {
-        return new Random().nextInt(faces) + 1;
+    public int[] roll( int diceNum ) {
+        int[] rolls = new int[diceNum];
+        for (int i = 0; i < 6; i++) {
+            rolls[i] = new Random().nextInt(faces) + 1;
+        }
+        return rolls;
     }
 }
