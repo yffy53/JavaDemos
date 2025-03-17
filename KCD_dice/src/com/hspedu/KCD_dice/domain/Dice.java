@@ -9,7 +9,7 @@ public class Dice {
     public Dice(int faces) {
         this.faces = faces;
     }
-    public int[] roll( int diceNum ) {
+    public int[] roll(int diceNum ) {
         int[] rolls = new int[diceNum];
         for (int i = 0; i < 6; i++) {
             rolls[i] = new Random().nextInt(faces) + 1;

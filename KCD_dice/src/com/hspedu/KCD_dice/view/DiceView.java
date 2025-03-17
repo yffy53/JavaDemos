@@ -6,6 +6,8 @@ import com.hspedu.KCD_dice.domain.PlayerAi;
 import com.hspedu.KCD_dice.service.DiceService;
 import com.hspedu.KCD_dice.utils.Utility;
 
+import java.util.Arrays;
+
 public class DiceView {
     private boolean loop = true;
     private char key;
@@ -14,6 +16,27 @@ public class DiceView {
     Player p1;
     PlayerAi p2;
     int target;
+
+    //询问加分
+    public int[] addScoreView(int[] rollResult) {
+        System.out.println("<"+ Arrays.toString(rollResult) + ">");
+        int[] points;
+        System.out.print("请输入要计分的骰子(0-5): ");
+        //points = Utility.readInt();
+        return points;
+    }
+
+    //显示骰子
+    public void showDice(int[] rollResult) {
+        System.out.print("<");
+        for (int i = 0; i < rollResult.length; i++) {
+            System.out.print(rollResult[i]);
+            if (i != rollResult.length - 1) {
+                System.out.print(",");
+            }
+        }
+        System.out.print(">");
+    }
 
     //抽签
     public void drawLotsView() {
